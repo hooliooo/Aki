@@ -6,7 +6,7 @@
 //  Copyright © 2018 Julio Alorro Software Development, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+//#import <UIKit/UIKit.h>
 
 //! Project version number for Villanelle.
 FOUNDATION_EXPORT double VillanelleVersionNumber;

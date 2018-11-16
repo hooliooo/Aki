@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		14E2B32E219B7CDF00284074 /* Villanelle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E2B324219B7CDF00284074 /* Villanelle.framework */; };
-		14E2B333219B7CDF00284074 /* VillanelleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2B332219B7CDF00284074 /* VillanelleTests.swift */; };
+		14E2B333219B7CDF00284074 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2B332219B7CDF00284074 /* Tests.swift */; };
 		14E2B335219B7CDF00284074 /* Villanelle.h in Headers */ = {isa = PBXBuildFile; fileRef = 14E2B327219B7CDF00284074 /* Villanelle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14E2B346219B7E5E00284074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2B345219B7E5E00284074 /* AppDelegate.swift */; };
+		14E2B348219B7E5E00284074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2B347219B7E5E00284074 /* ViewController.swift */; };
+		14E2B34B219B7E5E00284074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E2B349219B7E5E00284074 /* Main.storyboard */; };
+		14E2B34D219B7E6200284074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14E2B34C219B7E6200284074 /* Assets.xcassets */; };
+		14E2B350219B7E6200284074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E2B34E219B7E6200284074 /* LaunchScreen.storyboard */; };
+		14E2B355219B7E8C00284074 /* Villanelle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E2B324219B7CDF00284074 /* Villanelle.framework */; };
+		14E2B356219B7E8C00284074 /* Villanelle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14E2B324219B7CDF00284074 /* Villanelle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,15 +27,43 @@
 			remoteGlobalIDString = 14E2B323219B7CDF00284074;
 			remoteInfo = Villanelle;
 		};
+		14E2B357219B7E8C00284074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14E2B31B219B7CDF00284074 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14E2B323219B7CDF00284074;
+			remoteInfo = Villanelle;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		14E2B359219B7E8D00284074 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				14E2B356219B7E8C00284074 /* Villanelle.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		14E2B324219B7CDF00284074 /* Villanelle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Villanelle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E2B327219B7CDF00284074 /* Villanelle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Villanelle.h; sourceTree = "<group>"; };
 		14E2B328219B7CDF00284074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14E2B32D219B7CDF00284074 /* VillanelleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VillanelleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		14E2B332219B7CDF00284074 /* VillanelleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillanelleTests.swift; sourceTree = "<group>"; };
+		14E2B32D219B7CDF00284074 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14E2B332219B7CDF00284074 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		14E2B334219B7CDF00284074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14E2B343219B7E5E00284074 /* VillanelleExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VillanelleExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14E2B345219B7E5E00284074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14E2B347219B7E5E00284074 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14E2B34A219B7E5E00284074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14E2B34C219B7E6200284074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14E2B34F219B7E6200284074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14E2B351219B7E6200284074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,14 +82,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		14E2B340219B7E5E00284074 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E2B355219B7E8C00284074 /* Villanelle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		14E2B31A219B7CDF00284074 = {
 			isa = PBXGroup;
 			children = (
-				14E2B326219B7CDF00284074 /* Villanelle */,
-				14E2B331219B7CDF00284074 /* VillanelleTests */,
+				14E2B344219B7E5E00284074 /* VillanelleExample */,
+				14E2B326219B7CDF00284074 /* Sources */,
+				14E2B331219B7CDF00284074 /* Tests */,
 				14E2B325219B7CDF00284074 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,27 +107,49 @@
 			isa = PBXGroup;
 			children = (
 				14E2B324219B7CDF00284074 /* Villanelle.framework */,
-				14E2B32D219B7CDF00284074 /* VillanelleTests.xctest */,
+				14E2B32D219B7CDF00284074 /* Tests.xctest */,
+				14E2B343219B7E5E00284074 /* VillanelleExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		14E2B326219B7CDF00284074 /* Villanelle */ = {
+		14E2B326219B7CDF00284074 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				14E2B33E219B7DC000284074 /* Supporting Files */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		14E2B331219B7CDF00284074 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				14E2B332219B7CDF00284074 /* Tests.swift */,
+				14E2B334219B7CDF00284074 /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		14E2B33E219B7DC000284074 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				14E2B327219B7CDF00284074 /* Villanelle.h */,
 				14E2B328219B7CDF00284074 /* Info.plist */,
 			);
-			path = Villanelle;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		14E2B331219B7CDF00284074 /* VillanelleTests */ = {
+		14E2B344219B7E5E00284074 /* VillanelleExample */ = {
 			isa = PBXGroup;
 			children = (
-				14E2B332219B7CDF00284074 /* VillanelleTests.swift */,
-				14E2B334219B7CDF00284074 /* Info.plist */,
+				14E2B345219B7E5E00284074 /* AppDelegate.swift */,
+				14E2B347219B7E5E00284074 /* ViewController.swift */,
+				14E2B349219B7E5E00284074 /* Main.storyboard */,
+				14E2B34C219B7E6200284074 /* Assets.xcassets */,
+				14E2B34E219B7E6200284074 /* LaunchScreen.storyboard */,
+				14E2B351219B7E6200284074 /* Info.plist */,
 			);
-			path = VillanelleTests;
+			path = VillanelleExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,9 +184,9 @@
 			productReference = 14E2B324219B7CDF00284074 /* Villanelle.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		14E2B32C219B7CDF00284074 /* VillanelleTests */ = {
+		14E2B32C219B7CDF00284074 /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14E2B33B219B7CDF00284074 /* Build configuration list for PBXNativeTarget "VillanelleTests" */;
+			buildConfigurationList = 14E2B33B219B7CDF00284074 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
 				14E2B329219B7CDF00284074 /* Sources */,
 				14E2B32A219B7CDF00284074 /* Frameworks */,
@@ -131,10 +197,29 @@
 			dependencies = (
 				14E2B330219B7CDF00284074 /* PBXTargetDependency */,
 			);
-			name = VillanelleTests;
+			name = Tests;
 			productName = VillanelleTests;
-			productReference = 14E2B32D219B7CDF00284074 /* VillanelleTests.xctest */;
+			productReference = 14E2B32D219B7CDF00284074 /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		14E2B342219B7E5E00284074 /* VillanelleExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14E2B352219B7E6200284074 /* Build configuration list for PBXNativeTarget "VillanelleExample" */;
+			buildPhases = (
+				14E2B33F219B7E5E00284074 /* Sources */,
+				14E2B340219B7E5E00284074 /* Frameworks */,
+				14E2B341219B7E5E00284074 /* Resources */,
+				14E2B359219B7E8D00284074 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14E2B358219B7E8C00284074 /* PBXTargetDependency */,
+			);
+			name = VillanelleExample;
+			productName = VillanelleExample;
+			productReference = 14E2B343219B7E5E00284074 /* VillanelleExample.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -152,6 +237,9 @@
 					14E2B32C219B7CDF00284074 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					14E2B342219B7E5E00284074 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 14E2B31E219B7CDF00284074 /* Build configuration list for PBXProject "Villanelle" */;
@@ -160,6 +248,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 14E2B31A219B7CDF00284074;
 			productRefGroup = 14E2B325219B7CDF00284074 /* Products */;
@@ -167,7 +256,8 @@
 			projectRoot = "";
 			targets = (
 				14E2B323219B7CDF00284074 /* Villanelle */,
-				14E2B32C219B7CDF00284074 /* VillanelleTests */,
+				14E2B32C219B7CDF00284074 /* Tests */,
+				14E2B342219B7E5E00284074 /* VillanelleExample */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +277,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		14E2B341219B7E5E00284074 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E2B350219B7E6200284074 /* LaunchScreen.storyboard in Resources */,
+				14E2B34D219B7E6200284074 /* Assets.xcassets in Resources */,
+				14E2B34B219B7E5E00284074 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -201,7 +301,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14E2B333219B7CDF00284074 /* VillanelleTests.swift in Sources */,
+				14E2B333219B7CDF00284074 /* Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14E2B33F219B7E5E00284074 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E2B348219B7E5E00284074 /* ViewController.swift in Sources */,
+				14E2B346219B7E5E00284074 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +322,31 @@
 			target = 14E2B323219B7CDF00284074 /* Villanelle */;
 			targetProxy = 14E2B32F219B7CDF00284074 /* PBXContainerItemProxy */;
 		};
+		14E2B358219B7E8C00284074 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14E2B323219B7CDF00284074 /* Villanelle */;
+			targetProxy = 14E2B357219B7E8C00284074 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14E2B349219B7E5E00284074 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14E2B34A219B7E5E00284074 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14E2B34E219B7E6200284074 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14E2B34F219B7E6200284074 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		14E2B336219B7CDF00284074 /* Debug */ = {
@@ -348,7 +481,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Villanelle/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -373,7 +506,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Villanelle/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -393,7 +526,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S886WPSL95;
-				INFOPLIST_FILE = VillanelleTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,13 +544,49 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S886WPSL95;
-				INFOPLIST_FILE = VillanelleTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.julioalorro.VillanelleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		14E2B353219B7E6200284074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S886WPSL95;
+				INFOPLIST_FILE = VillanelleExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.julioalorro.VillanelleExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14E2B354219B7E6200284074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S886WPSL95;
+				INFOPLIST_FILE = VillanelleExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.julioalorro.VillanelleExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -445,11 +614,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14E2B33B219B7CDF00284074 /* Build configuration list for PBXNativeTarget "VillanelleTests" */ = {
+		14E2B33B219B7CDF00284074 /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14E2B33C219B7CDF00284074 /* Debug */,
 				14E2B33D219B7CDF00284074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14E2B352219B7E6200284074 /* Build configuration list for PBXNativeTarget "VillanelleExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14E2B353219B7E6200284074 /* Debug */,
+				14E2B354219B7E6200284074 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
