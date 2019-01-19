@@ -9,10 +9,10 @@
 //#import <UIKit/UIKit.h>
 
 //! Project version number for Villanelle.
-FOUNDATION_EXPORT double VillanelleVersionNumber;
+//FOUNDATION_EXPORT double AkiVersionNumber;
 
 //! Project version string for Villanelle.
-FOUNDATION_EXPORT const unsigned char VillanelleVersionString[];
+//FOUNDATION_EXPORT const unsigned char AkiVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Villanelle/PublicHeader.h>
 
