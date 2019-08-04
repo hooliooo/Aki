@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		142AFAF021F3320200F52ABE /* AkiCopyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142AFAEF21F3320200F52ABE /* AkiCopyable.swift */; };
-		142AFAF221F332F500F52ABE /* List+Aki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142AFAF121F332F500F52ABE /* List+Aki.swift */; };
-		14631A5521F31E5200198C29 /* Object+Aki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14631A5421F31E5200198C29 /* Object+Aki.swift */; };
+		095681A93D73B2A2E08554D3 /* Pods_Aki_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDACF5E871FB240F036AFAE /* Pods_Aki_Tests.framework */; };
+		14122D3E22F5F96A00282598 /* AkiOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14122D3D22F5F96A00282598 /* AkiOperation.swift */; };
+		14122D4022F6158500282598 /* DownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14122D3F22F6158500282598 /* DownloadOperation.swift */; };
+		14122D4222F615BB00282598 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14122D4122F615BB00282598 /* Constants.swift */; };
+		14122D4622F71EDC00282598 /* WriteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14122D4522F71EDC00282598 /* WriteOperation.swift */; };
+		14122D4C22F751A400282598 /* AkiOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14122D4B22F751A400282598 /* AkiOperationManager.swift */; };
+		142AFAF721F3970700F52ABE /* AlsoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142AFAF621F3970700F52ABE /* AlsoTests.swift */; };
+		149B4E0522F4567C0042DBD2 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B4E0422F4567C0042DBD2 /* AsyncOperation.swift */; };
+		149B4E0722F459AC0042DBD2 /* DataTaskOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B4E0622F459AC0042DBD2 /* DataTaskOperation.swift */; };
+		149B4E0922F45E430042DBD2 /* DeserializationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B4E0822F45E430042DBD2 /* DeserializationOperation.swift */; };
 		14E2B32E219B7CDF00284074 /* Aki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E2B324219B7CDF00284074 /* Aki.framework */; };
 		14E2B333219B7CDF00284074 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2B332219B7CDF00284074 /* Tests.swift */; };
 		14E2B335219B7CDF00284074 /* Aki.h in Headers */ = {isa = PBXBuildFile; fileRef = 14E2B327219B7CDF00284074 /* Aki.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,7 +27,6 @@
 		14E2B350219B7E6200284074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E2B34E219B7E6200284074 /* LaunchScreen.storyboard */; };
 		14E2B355219B7E8C00284074 /* Aki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E2B324219B7CDF00284074 /* Aki.framework */; };
 		14E2B356219B7E8C00284074 /* Aki.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14E2B324219B7CDF00284074 /* Aki.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3DD0058FF1CE059A6C8B061C /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDD1364D6C198F1839F1020 /* Pods_Tests.framework */; };
 		C4E7881879B737718321AB0E /* Pods_Aki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556580BCCDE6F60676E9F087 /* Pods_Aki.framework */; };
 		FB77A894B26161E802FD0400 /* Pods_AkiExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 200F3E6547CDB90985AEF4E6 /* Pods_AkiExample.framework */; };
 /* End PBXBuildFile section */
@@ -57,13 +63,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		142AFAEF21F3320200F52ABE /* AkiCopyable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkiCopyable.swift; sourceTree = "<group>"; };
-		142AFAF121F332F500F52ABE /* List+Aki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+Aki.swift"; sourceTree = "<group>"; };
-		14631A5421F31E5200198C29 /* Object+Aki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object+Aki.swift"; sourceTree = "<group>"; };
+		0FDACF5E871FB240F036AFAE /* Pods_Aki_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aki_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14122D3D22F5F96A00282598 /* AkiOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkiOperation.swift; sourceTree = "<group>"; };
+		14122D3F22F6158500282598 /* DownloadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadOperation.swift; sourceTree = "<group>"; };
+		14122D4122F615BB00282598 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		14122D4322F667AF00282598 /* IO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
+		14122D4522F71EDC00282598 /* WriteOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteOperation.swift; sourceTree = "<group>"; };
+		14122D4822F7508B00282598 /* Aki.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Aki.podspec; sourceTree = "<group>"; };
+		14122D4922F7508B00282598 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		14122D4B22F751A400282598 /* AkiOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkiOperationManager.swift; sourceTree = "<group>"; };
+		142AFAF621F3970700F52ABE /* AlsoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlsoTests.swift; sourceTree = "<group>"; };
+		149B4E0422F4567C0042DBD2 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		149B4E0622F459AC0042DBD2 /* DataTaskOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskOperation.swift; sourceTree = "<group>"; };
+		149B4E0822F45E430042DBD2 /* DeserializationOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeserializationOperation.swift; sourceTree = "<group>"; };
 		14E2B324219B7CDF00284074 /* Aki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Aki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E2B327219B7CDF00284074 /* Aki.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aki.h; sourceTree = "<group>"; };
 		14E2B328219B7CDF00284074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14E2B32D219B7CDF00284074 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14E2B32D219B7CDF00284074 /* Aki Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aki Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E2B332219B7CDF00284074 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		14E2B334219B7CDF00284074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14E2B343219B7E5E00284074 /* AkiExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AkiExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +90,7 @@
 		14E2B34F219B7E6200284074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14E2B351219B7E6200284074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		200F3E6547CDB90985AEF4E6 /* Pods_AkiExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AkiExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B515A65035768817D6468F3 /* Pods-Aki Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aki Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aki Tests/Pods-Aki Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		556580BCCDE6F60676E9F087 /* Pods_Aki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C8490592537950CE96456B4 /* Pods-AkiExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AkiExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AkiExample/Pods-AkiExample.debug.xcconfig"; sourceTree = "<group>"; };
 		7DE04FF4F9D57CEE2BA71FA8 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +98,7 @@
 		95FE2F008710531F8BF5AD1B /* Pods-Aki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aki.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aki/Pods-Aki.debug.xcconfig"; sourceTree = "<group>"; };
 		9E73B97C8CC41B0281F2AB59 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DA77D803A6A4267B3572CE0E /* Pods-AkiExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AkiExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-AkiExample/Pods-AkiExample.release.xcconfig"; sourceTree = "<group>"; };
+		DD906CAB8CC164B808B8E1B3 /* Pods-Aki Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aki Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aki Tests/Pods-Aki Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F0ABA2895DF30F2C3B87842C /* Pods-Aki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aki.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aki/Pods-Aki.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14E2B32E219B7CDF00284074 /* Aki.framework in Frameworks */,
-				3DD0058FF1CE059A6C8B061C /* Pods_Tests.framework in Frameworks */,
+				095681A93D73B2A2E08554D3 /* Pods_Aki_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,12 +132,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14122D4722F7507400282598 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				14122D4822F7508B00282598 /* Aki.podspec */,
+				14122D4922F7508B00282598 /* LICENSE.md */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
+		14122D4A22F7512600282598 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				14122D3D22F5F96A00282598 /* AkiOperation.swift */,
+				149B4E0422F4567C0042DBD2 /* AsyncOperation.swift */,
+				149B4E0622F459AC0042DBD2 /* DataTaskOperation.swift */,
+				149B4E0822F45E430042DBD2 /* DeserializationOperation.swift */,
+				14122D3F22F6158500282598 /* DownloadOperation.swift */,
+				14122D4522F71EDC00282598 /* WriteOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		142AFAF321F3628B00F52ABE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				14122D4322F667AF00282598 /* IO.swift */,
+				14122D4B22F751A400282598 /* AkiOperationManager.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		14631A5321F31E3800198C29 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				142AFAEF21F3320200F52ABE /* AkiCopyable.swift */,
-				14631A5421F31E5200198C29 /* Object+Aki.swift */,
-				142AFAF121F332F500F52ABE /* List+Aki.swift */,
+				14122D4122F615BB00282598 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -127,9 +174,10 @@
 		14E2B31A219B7CDF00284074 = {
 			isa = PBXGroup;
 			children = (
+				14122D4722F7507400282598 /* Metadata */,
 				14E2B344219B7E5E00284074 /* Example */,
 				14E2B326219B7CDF00284074 /* Sources */,
-				14E2B331219B7CDF00284074 /* Tests */,
+				14E2B331219B7CDF00284074 /* Aki Tests */,
 				14E2B325219B7CDF00284074 /* Products */,
 				D7CDD8F20EADC931B43E5110 /* Pods */,
 				FC783839211A6AA7A0E2BA63 /* Frameworks */,
@@ -140,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				14E2B324219B7CDF00284074 /* Aki.framework */,
-				14E2B32D219B7CDF00284074 /* Tests.xctest */,
+				14E2B32D219B7CDF00284074 /* Aki Tests.xctest */,
 				14E2B343219B7E5E00284074 /* AkiExample.app */,
 			);
 			name = Products;
@@ -149,19 +197,22 @@
 		14E2B326219B7CDF00284074 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				14122D4A22F7512600282598 /* Operations */,
+				142AFAF321F3628B00F52ABE /* Classes */,
 				14631A5321F31E3800198C29 /* Utilities */,
 				14E2B33E219B7DC000284074 /* Supporting Files */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		14E2B331219B7CDF00284074 /* Tests */ = {
+		14E2B331219B7CDF00284074 /* Aki Tests */ = {
 			isa = PBXGroup;
 			children = (
 				14E2B332219B7CDF00284074 /* Tests.swift */,
+				142AFAF621F3970700F52ABE /* AlsoTests.swift */,
 				14E2B334219B7CDF00284074 /* Info.plist */,
 			);
-			path = Tests;
+			path = "Aki Tests";
 			sourceTree = "<group>";
 		};
 		14E2B33E219B7DC000284074 /* Supporting Files */ = {
@@ -195,6 +246,8 @@
 				DA77D803A6A4267B3572CE0E /* Pods-AkiExample.release.xcconfig */,
 				7DE04FF4F9D57CEE2BA71FA8 /* Pods-Tests.debug.xcconfig */,
 				9E73B97C8CC41B0281F2AB59 /* Pods-Tests.release.xcconfig */,
+				2B515A65035768817D6468F3 /* Pods-Aki Tests.debug.xcconfig */,
+				DD906CAB8CC164B808B8E1B3 /* Pods-Aki Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -205,6 +258,7 @@
 				556580BCCDE6F60676E9F087 /* Pods_Aki.framework */,
 				200F3E6547CDB90985AEF4E6 /* Pods_AkiExample.framework */,
 				8CDD1364D6C198F1839F1020 /* Pods_Tests.framework */,
+				0FDACF5E871FB240F036AFAE /* Pods_Aki_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -242,9 +296,9 @@
 			productReference = 14E2B324219B7CDF00284074 /* Aki.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		14E2B32C219B7CDF00284074 /* Tests */ = {
+		14E2B32C219B7CDF00284074 /* Aki Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14E2B33B219B7CDF00284074 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildConfigurationList = 14E2B33B219B7CDF00284074 /* Build configuration list for PBXNativeTarget "Aki Tests" */;
 			buildPhases = (
 				A3118C2E116AE2E7424CDDD8 /* [CP] Check Pods Manifest.lock */,
 				14E2B329219B7CDF00284074 /* Sources */,
@@ -257,9 +311,9 @@
 			dependencies = (
 				14E2B330219B7CDF00284074 /* PBXTargetDependency */,
 			);
-			name = Tests;
+			name = "Aki Tests";
 			productName = VillanelleTests;
-			productReference = 14E2B32D219B7CDF00284074 /* Tests.xctest */;
+			productReference = 14E2B32D219B7CDF00284074 /* Aki Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		14E2B342219B7E5E00284074 /* AkiExample */ = {
@@ -295,7 +349,7 @@
 				TargetAttributes = {
 					14E2B323219B7CDF00284074 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1030;
 					};
 					14E2B32C219B7CDF00284074 = {
 						CreatedOnToolsVersion = 10.1;
@@ -319,7 +373,7 @@
 			projectRoot = "";
 			targets = (
 				14E2B323219B7CDF00284074 /* Aki */,
-				14E2B32C219B7CDF00284074 /* Tests */,
+				14E2B32C219B7CDF00284074 /* Aki Tests */,
 				14E2B342219B7E5E00284074 /* AkiExample */,
 			);
 		};
@@ -412,7 +466,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Tests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Aki Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -427,7 +481,9 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Aki Tests/Pods-Aki Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
@@ -435,12 +491,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aki Tests/Pods-Aki Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FB8919D1C91901B2A1762EDC /* [CP] Embed Pods Frameworks */ = {
@@ -474,9 +532,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				142AFAF221F332F500F52ABE /* List+Aki.swift in Sources */,
-				142AFAF021F3320200F52ABE /* AkiCopyable.swift in Sources */,
-				14631A5521F31E5200198C29 /* Object+Aki.swift in Sources */,
+				14122D4022F6158500282598 /* DownloadOperation.swift in Sources */,
+				14122D4C22F751A400282598 /* AkiOperationManager.swift in Sources */,
+				149B4E0922F45E430042DBD2 /* DeserializationOperation.swift in Sources */,
+				14122D3E22F5F96A00282598 /* AkiOperation.swift in Sources */,
+				14122D4622F71EDC00282598 /* WriteOperation.swift in Sources */,
+				149B4E0722F459AC0042DBD2 /* DataTaskOperation.swift in Sources */,
+				149B4E0522F4567C0042DBD2 /* AsyncOperation.swift in Sources */,
+				14122D4222F615BB00282598 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14E2B333219B7CDF00284074 /* Tests.swift in Sources */,
+				142AFAF721F3970700F52ABE /* AlsoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,12 +777,12 @@
 		};
 		14E2B33C219B7CDF00284074 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7DE04FF4F9D57CEE2BA71FA8 /* Pods-Tests.debug.xcconfig */;
+			baseConfigurationReference = 2B515A65035768817D6468F3 /* Pods-Aki Tests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S886WPSL95;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Aki Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -733,12 +797,12 @@
 		};
 		14E2B33D219B7CDF00284074 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E73B97C8CC41B0281F2AB59 /* Pods-Tests.release.xcconfig */;
+			baseConfigurationReference = DD906CAB8CC164B808B8E1B3 /* Pods-Aki Tests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S886WPSL95;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Aki Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -755,7 +819,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6C8490592537950CE96456B4 /* Pods-AkiExample.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S886WPSL95;
@@ -775,7 +839,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DA77D803A6A4267B3572CE0E /* Pods-AkiExample.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S886WPSL95;
@@ -812,7 +876,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14E2B33B219B7CDF00284074 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+		14E2B33B219B7CDF00284074 /* Build configuration list for PBXNativeTarget "Aki Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14E2B33C219B7CDF00284074 /* Debug */,

@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "Aki"
   s.version      = "0.0.1"
-  s.summary      = "Aki is a personal toolset designed to make working with Realm much more convenient."
+  s.summary      = "Aki is an Operation based framework that encapsulates business logic into custom Operation subclasses."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +25,8 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                   Aki is an Operation based framework that leverages the Operation class to abstract away business logic.
+                   Aki provides a base implementation of a custom Operation, along with some Operation implementations of common business logic.
                    DESC
 
   s.homepage     = "https://github.com/hooliooo/Aki"
@@ -59,7 +61,6 @@ Pod::Spec.new do |s|
   #
 
   s.platform     = :ios, "10.0"
-
   s.ios.deployment_target = "10.0"
 
 
@@ -81,31 +82,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "Sources/**/*.swift"
-
-  # s.public_header_files = "Classes/**/*.h"
-
-
-  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  A list of resources included with the Pod. These are copied into the
-  #  target bundle with a build phase script. Anything else will be cleaned.
-  #  You can preserve files from being cleaned, please don't preserve
-  #  non-essential files like tests, examples and documentation.
-  #
-
-  # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
-
-  # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
-
-
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-
-  s.framework  = "SomeFramework"
+  s.exclude_files = "Sources/Classes/IO.swift"
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -114,8 +91,6 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   s.requires_arc = true
-  s.swift_version = '4.2'
-
-  s.dependency "RealmSwift"
+  s.swift_version = '5.0'
 
 end
