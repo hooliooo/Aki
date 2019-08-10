@@ -41,7 +41,7 @@ open class AkiOperationManager {
 
 open class AkiNetworkOperationManager: AkiOperationManager {
 
-    public final override func enqueue(_ operation: Operation) {
+    open override func enqueue(_ operation: Operation) {
 
         operation.aki.add(
             completionBlock: { () -> Void in
@@ -56,11 +56,11 @@ open class AkiNetworkOperationManager: AkiOperationManager {
         }
     }
 
-    public final override func enqueue(operations: [Operation]) {
+    open override func enqueue(operations: [Operation]) {
         super.enqueue(operations: operations)
     }
 
-    public final override func enqueue(operations: Operation...) {
+    open override func enqueue(operations: Operation...) {
         super.enqueue(operations: operations)
     }
 
