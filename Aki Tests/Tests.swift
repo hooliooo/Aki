@@ -24,10 +24,10 @@ class AkiCopyableTests: QuickSpec {
 
                 let groupOp: APIOperation = APIOperation(networkingOp: op, jsonOp: jsonOp)
 
-                let downloadURL: URL = URL(string: "https://pokeapi.co/api/v2/pokemon/2")!
-                let rootURL: URL = try! FileManager.default.url(for: FileManager.SearchPathDirectory.cachesDirectory, in: FileManager.SearchPathDomainMask.userDomainMask, appropriateFor: nil, create: true)
-                let cacheURL: URL = rootURL.appendingPathComponent("\(downloadURL.lastPathComponent).json")
-                let downloadOp: DownloadTaskOperation = DownloadTaskOperation(downloadURL: downloadURL, cacheURL: cacheURL)
+//                let downloadURL: URL = URL(string: "https://pokeapi.co/api/v2/pokemon/2")!
+//                let rootURL: URL = try! FileManager.default.url(for: FileManager.SearchPathDirectory.cachesDirectory, in: FileManager.SearchPathDomainMask.userDomainMask, appropriateFor: nil, create: true)
+//                let cacheURL: URL = rootURL.appendingPathComponent("\(downloadURL.lastPathComponent).json")
+//                let downloadOp: DownloadTaskOperation = DownloadTaskOperation(downloadURL: downloadURL, cacheURL: cacheURL)
 
 //                let writeOp: WriteOperation = WriteOperation(
 //                    content: WriteOperation.Content.url(cacheURL),

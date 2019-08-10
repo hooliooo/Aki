@@ -25,19 +25,22 @@ public final class DownloadTaskOperation: AsyncOperation<Result<URL, Error>> {
      Initializer.
 
      - parameters:
-        - urlRequest : The URLRequest instance containing the HTTP network request data.
-        - cacheURL   : The URL of the location where the downloaded data will be stored.
-        - session    : URLSession instance. The default value is URLSession.shared.
-        - fileManager: The FileManager instance. The default value is FileManager.default.
+        - urlRequest     : The URLRequest instance containing the HTTP network request data.
+        - cacheURL       : The URL of the location where the downloaded data will be stored.
+        - useExistingFile: If file exists at cacheURL, use that data instead of downloading data.
+        - session        : URLSession instance. The default value is URLSession.shared.
+        - fileManager    : The FileManager instance. The default value is FileManager.default.
     */
     public init(
         urlRequest: URLRequest,
         cacheURL: URL,
+        useExistingFile: Bool,
         session: URLSession = URLSession.shared,
         fileManager: FileManager = FileManager.default
     ) {
         self.urlRequest = urlRequest
         self.cacheURL = cacheURL
+        self.useExistingFile = useExistingFile
         self.session = session
         self.fileManager = fileManager
         super.init()
@@ -47,18 +50,26 @@ public final class DownloadTaskOperation: AsyncOperation<Result<URL, Error>> {
      Initializer.
 
      - parameters:
-         - downloadURL: The URL of the data to be downloaded.
-         - cacheURL   : The URL of the location where the downloaded data will be stored.
-         - session    : URLSession instance. The default value is URLSession.shared.
-         - fileManager: The FileManager instance. The default value is FileManager.default.
+         - downloadURL    : The URL of the data to be downloaded.
+         - cacheURL       : The URL of the location where the downloaded data will be stored.
+         - useExistingFile: If file exists at cacheURL, use that data instead of downloading data.
+         - session        : URLSession instance. The default value is URLSession.shared.
+         - fileManager    : The FileManager instance. The default value is FileManager.default.
     */
     public convenience init(
         downloadURL: URL,
         cacheURL: URL,
+        useExistingFile: Bool,
         session: URLSession = URLSession.shared,
         fileManager: FileManager = FileManager.default
     ) {
-        self.init(urlRequest: URLRequest(url: downloadURL), cacheURL: cacheURL, session: session, fileManager: fileManager)
+        self.init(
+            urlRequest: URLRequest(url: downloadURL),
+            cacheURL: cacheURL,
+            useExistingFile: useExistingFile,
+            session: session,
+            fileManager: fileManager
+        )
     }
 
     /**
@@ -70,6 +81,11 @@ public final class DownloadTaskOperation: AsyncOperation<Result<URL, Error>> {
      The URL of the location where the downloaded data will be stored.
     */
     public let cacheURL: URL
+
+    /**
+     Bool flag to indicate whether or not the existing file at the cacheURL will be used.
+    */
+    public let useExistingFile: Bool
 
     /**
      The URLSession that creates the URLSessionDownloadTask. This URLSession instance is not strongly referenced by the DownloadTaskOperation.
@@ -102,7 +118,12 @@ public final class DownloadTaskOperation: AsyncOperation<Result<URL, Error>> {
             } else if let url = url, let response = response as? HTTPURLResponse {
                 os_log("Success Response: %@", log: logger, type: OSLogType.info, response.description)
 
-                try? s.fileManager.removeItem(at: s.cacheURL)
+                if s.useExistingFile, s.fileManager.fileExists(atPath: s.cacheURL.path) {
+                    s.set(value: Result.success(s.cacheURL))
+                    return
+                } else {
+                    try? s.fileManager.removeItem(at: s.cacheURL)
+                }
 
                 do {
                     try s.fileManager.moveItem(at: url, to: s.cacheURL)
@@ -113,7 +134,7 @@ public final class DownloadTaskOperation: AsyncOperation<Result<URL, Error>> {
                         url.absoluteString,
                         s.cacheURL.absoluteString
                     )
-                    self?.set(value: Result.success(s.cacheURL))
+                    s.set(value: Result.success(s.cacheURL))
                 } catch let error {
                     os_log(
                         "Could not move file at %s to %s. because %s",
@@ -123,7 +144,7 @@ public final class DownloadTaskOperation: AsyncOperation<Result<URL, Error>> {
                         s.cacheURL.absoluteString,
                         error.localizedDescription
                     )
-                    self?.set(value: Result.failure(error))
+                    s.set(value: Result.failure(error))
                 }
 
             } else {
