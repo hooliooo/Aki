@@ -13,13 +13,13 @@ import struct Foundation.URL
 import Foundation
 import os
 
-fileprivate let logger: OSLog = OSLog(subsystem: Constants.subsystem, category: "Download Operation")
+fileprivate let logger: OSLog = OSLog(subsystem: Constants.subsystem, category: "DownloadTaskOperation")
 
 /**
- A DownloadOperation is an AsyncOperation that represents a URLSessionDownloadTask created from a URLSession's
+ A DownloadTaskOperation is an AsyncOperation that represents a URLSessionDownloadTask created from a URLSession's
  downloadTask(request:completionHandler) method.
 */
-public final class DownloadOperation: AsyncOperation<Result<URL, Error>> {
+public final class DownloadTaskOperation: AsyncOperation<Result<URL, Error>> {
 
     /**
      Initializer.
@@ -72,7 +72,7 @@ public final class DownloadOperation: AsyncOperation<Result<URL, Error>> {
     public let cacheURL: URL
 
     /**
-     The URLSession that creates the URLSessionDownloadTask. This URLSession instance is not strongly referenced by the DownloadOperation.
+     The URLSession that creates the URLSessionDownloadTask. This URLSession instance is not strongly referenced by the DownloadTaskOperation.
     */
     private unowned let session: URLSession
 

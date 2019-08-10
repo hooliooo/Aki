@@ -5,6 +5,11 @@
 //
 
 import class Foundation.Operation
+import class os.OSLog
+import func os.os_log
+import struct os.OSLogType
+
+fileprivate let logger: OSLog = OSLog(subsystem: Constants.subsystem, category: "AkiOperation")
 
 /**
  AkiOperation is an abstract subclass of Operation.
@@ -49,6 +54,18 @@ open class AkiOperation<T>: Operation {
         super.init()
     }
 
+    deinit {
+        let description: String
+
+        if let name = self.name {
+            description = name
+        } else {
+            description = String(describing: type(of: self))
+        }
+
+        os_log("%{public}@ was deallocated", log: logger, type: OSLogType.info, description)
+    }
+
     /**
      The end value of the AkiOperation's task.
     */
@@ -68,7 +85,7 @@ open class AkiOperation<T>: Operation {
         }
     }
 
-    // Override properties
+    // MARK: Properties
     open override var isReady: Bool {
         return super.isReady && self.state == AkiOperation.State.ready
     }
@@ -81,7 +98,7 @@ open class AkiOperation<T>: Operation {
         return self.state == AkiOperation.State.finished
     }
 
-    // Override start
+    // MARK: Methods
     open override func start() {
         if self.isCancelled {
             self.state = AkiOperation.State.finished

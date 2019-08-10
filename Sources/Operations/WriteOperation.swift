@@ -19,7 +19,7 @@ fileprivate let logger: OSLog = OSLog(subsystem: Constants.subsystem, category: 
 /**
  A WriteOperation is an AsyncOperation that represents the business logic of writing Data to the file system.
 */
-public final class WriteOperation: AsyncOperation<Result<URL, Error>> {
+public final class WriteOperation: AsyncOperation<Result<URL, WriteOperation.Error>> {
 
     private static let queue: DispatchQueue = DispatchQueue(label: "WriteOperation", qos: DispatchQoS.background)
 
@@ -50,7 +50,7 @@ public final class WriteOperation: AsyncOperation<Result<URL, Error>> {
 
         self.content = content
 
-        self.outFileURL = rootURL
+        self.outputFileURL = rootURL
             .appendingPathComponent(outputFileName)
             .appendingPathExtension(fileExtension)
         super.init()
@@ -61,7 +61,7 @@ public final class WriteOperation: AsyncOperation<Result<URL, Error>> {
     /**
      The URL of the destination file.
     */
-    private let outFileURL: URL
+    private let outputFileURL: URL
 
     /**
      The content to be written to the destination file.
@@ -79,7 +79,7 @@ public final class WriteOperation: AsyncOperation<Result<URL, Error>> {
 
         guard let writeIO = DispatchIO(
             type: DispatchIO.StreamType.stream,
-            path: self.outFileURL.path,
+            path: self.outputFileURL.path,
             oflag: (O_RDWR | O_CREAT | O_APPEND),
             mode: (S_IWUSR | S_IRUSR | S_IRGRP | S_IROTH),
             queue: WriteOperation.queue,
@@ -107,7 +107,7 @@ public final class WriteOperation: AsyncOperation<Result<URL, Error>> {
                         error.localizedDescription,
                         url.path
                     )
-
+                    self.value = Result.failure(WriteOperation.Error.urlCannotBeRead(error.localizedDescription))
                     self.state = AkiOperation.State.finished
                     return
                 }
@@ -125,7 +125,7 @@ public final class WriteOperation: AsyncOperation<Result<URL, Error>> {
             guard writeError == 0 else {
                 writeIO.close(flags: DispatchIO.CloseFlags.stop)
                 os_log("WriteOperation error: %i", log: logger, type: OSLogType.error, writeError)
-                s.value = Result.failure(NSError(domain: "DispatchIO Write Error", code: Int(writeError), userInfo: nil))
+                s.value = Result.failure(WriteOperation.Error.writeError(writeError))
                 s.state = AkiOperation.State.finished
                 return
             }
@@ -133,14 +133,15 @@ public final class WriteOperation: AsyncOperation<Result<URL, Error>> {
             guard !s.isCancelled else {
                 writeIO.close(flags: DispatchIO.CloseFlags.stop)
                 os_log("WriteOperation cancelled", log: logger, type: OSLogType.info)
+                s.value = Result.failure(WriteOperation.Error.cancelled)
                 s.state = AkiOperation.State.finished
                 return
             }
 
             if isDoneWriting {
-                s.value = Result.success(s.outFileURL)
+                s.value = Result.success(s.outputFileURL)
                 writeIO.close()
-                os_log("Done writing to %s", log: logger, type: OSLogType.info, s.outFileURL.path)
+                os_log("Done writing to %s", log: logger, type: OSLogType.info, s.outputFileURL.path)
                 s.state = AkiOperation.State.finished
             }
         }
@@ -164,6 +165,20 @@ public extension WriteOperation {
          The data to be written to disk.
         */
         case data(Data)
+    }
+
+}
+
+public extension WriteOperation {
+
+    /**
+     Represents errors that could be encountered during write operations.
+     */
+    enum Error: Swift.Error {
+
+        case urlCannotBeRead(String)
+        case writeError(Int32)
+        case cancelled
     }
 
 }

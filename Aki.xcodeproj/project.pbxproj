@@ -3,16 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		095681A93D73B2A2E08554D3 /* Pods_Aki_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDACF5E871FB240F036AFAE /* Pods_Aki_Tests.framework */; };
+		1406EEA522FE9D8000EC0CDD /* Operation+Aki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1406EEA422FE9D8000EC0CDD /* Operation+Aki.swift */; };
 		14122D3E22F5F96A00282598 /* AkiOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14122D3D22F5F96A00282598 /* AkiOperation.swift */; };
-		14122D4022F6158500282598 /* DownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14122D3F22F6158500282598 /* DownloadOperation.swift */; };
+		14122D4022F6158500282598 /* DownloadTaskOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14122D3F22F6158500282598 /* DownloadTaskOperation.swift */; };
 		14122D4222F615BB00282598 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14122D4122F615BB00282598 /* Constants.swift */; };
 		14122D4622F71EDC00282598 /* WriteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14122D4522F71EDC00282598 /* WriteOperation.swift */; };
 		14122D4C22F751A400282598 /* AkiOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14122D4B22F751A400282598 /* AkiOperationManager.swift */; };
+		14122D5022F774DA00282598 /* BatchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14122D4F22F774DA00282598 /* BatchOperation.swift */; };
 		142AFAF721F3970700F52ABE /* AlsoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142AFAF621F3970700F52ABE /* AlsoTests.swift */; };
 		149B4E0522F4567C0042DBD2 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B4E0422F4567C0042DBD2 /* AsyncOperation.swift */; };
 		149B4E0722F459AC0042DBD2 /* DataTaskOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B4E0622F459AC0042DBD2 /* DataTaskOperation.swift */; };
@@ -64,14 +66,16 @@
 
 /* Begin PBXFileReference section */
 		0FDACF5E871FB240F036AFAE /* Pods_Aki_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aki_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1406EEA422FE9D8000EC0CDD /* Operation+Aki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operation+Aki.swift"; sourceTree = "<group>"; };
 		14122D3D22F5F96A00282598 /* AkiOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkiOperation.swift; sourceTree = "<group>"; };
-		14122D3F22F6158500282598 /* DownloadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadOperation.swift; sourceTree = "<group>"; };
+		14122D3F22F6158500282598 /* DownloadTaskOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTaskOperation.swift; sourceTree = "<group>"; };
 		14122D4122F615BB00282598 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		14122D4322F667AF00282598 /* IO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
 		14122D4522F71EDC00282598 /* WriteOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteOperation.swift; sourceTree = "<group>"; };
 		14122D4822F7508B00282598 /* Aki.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Aki.podspec; sourceTree = "<group>"; };
 		14122D4922F7508B00282598 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		14122D4B22F751A400282598 /* AkiOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkiOperationManager.swift; sourceTree = "<group>"; };
+		14122D4F22F774DA00282598 /* BatchOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchOperation.swift; sourceTree = "<group>"; };
 		142AFAF621F3970700F52ABE /* AlsoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlsoTests.swift; sourceTree = "<group>"; };
 		149B4E0422F4567C0042DBD2 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		149B4E0622F459AC0042DBD2 /* DataTaskOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskOperation.swift; sourceTree = "<group>"; };
@@ -148,8 +152,9 @@
 				149B4E0422F4567C0042DBD2 /* AsyncOperation.swift */,
 				149B4E0622F459AC0042DBD2 /* DataTaskOperation.swift */,
 				149B4E0822F45E430042DBD2 /* DeserializationOperation.swift */,
-				14122D3F22F6158500282598 /* DownloadOperation.swift */,
+				14122D3F22F6158500282598 /* DownloadTaskOperation.swift */,
 				14122D4522F71EDC00282598 /* WriteOperation.swift */,
+				14122D4F22F774DA00282598 /* BatchOperation.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				14122D4122F615BB00282598 /* Constants.swift */,
+				1406EEA422FE9D8000EC0CDD /* Operation+Aki.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -325,7 +331,6 @@
 				14E2B340219B7E5E00284074 /* Frameworks */,
 				14E2B341219B7E5E00284074 /* Resources */,
 				14E2B359219B7E8D00284074 /* Embed Frameworks */,
-				FB8919D1C91901B2A1762EDC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,6 +358,7 @@
 					};
 					14E2B32C219B7CDF00284074 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 					14E2B342219B7E5E00284074 = {
 						CreatedOnToolsVersion = 10.1;
@@ -479,50 +485,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Aki Tests/Pods-Aki Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Aki Tests/Pods-Aki Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Aki Tests/Pods-Aki Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aki Tests/Pods-Aki Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FB8919D1C91901B2A1762EDC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AkiExample/Pods-AkiExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AkiExample/Pods-AkiExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aki Tests/Pods-Aki Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -532,7 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14122D4022F6158500282598 /* DownloadOperation.swift in Sources */,
+				14122D4022F6158500282598 /* DownloadTaskOperation.swift in Sources */,
 				14122D4C22F751A400282598 /* AkiOperationManager.swift in Sources */,
 				149B4E0922F45E430042DBD2 /* DeserializationOperation.swift in Sources */,
 				14122D3E22F5F96A00282598 /* AkiOperation.swift in Sources */,
@@ -540,6 +511,8 @@
 				149B4E0722F459AC0042DBD2 /* DataTaskOperation.swift in Sources */,
 				149B4E0522F4567C0042DBD2 /* AsyncOperation.swift in Sources */,
 				14122D4222F615BB00282598 /* Constants.swift in Sources */,
+				14122D5022F774DA00282598 /* BatchOperation.swift in Sources */,
+				1406EEA522FE9D8000EC0CDD /* Operation+Aki.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,7 +715,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -770,7 +743,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.julioalorro.Villanelle;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -790,7 +763,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.julioalorro.VillanelleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -810,7 +783,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.julioalorro.VillanelleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
