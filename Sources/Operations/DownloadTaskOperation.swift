@@ -98,7 +98,7 @@ public final class DownloadTaskOperation: AsyncOperation<Result<URL, Error>> {
 
             if let error = error {
                 os_log("Error Response: %@", log: logger, type: OSLogType.error, error.localizedDescription)
-                self?.value = Result.failure(error)
+                self?.set(value: Result.failure(error))
             } else if let url = url, let response = response as? HTTPURLResponse {
                 os_log("Success Response: %@", log: logger, type: OSLogType.info, response.description)
 
@@ -113,7 +113,7 @@ public final class DownloadTaskOperation: AsyncOperation<Result<URL, Error>> {
                         url.absoluteString,
                         s.cacheURL.absoluteString
                     )
-                    self?.value = Result.success(s.cacheURL)
+                    self?.set(value: Result.success(s.cacheURL))
                 } catch let error {
                     os_log(
                         "Could not move file at %s to %s. because %s",
@@ -123,7 +123,7 @@ public final class DownloadTaskOperation: AsyncOperation<Result<URL, Error>> {
                         s.cacheURL.absoluteString,
                         error.localizedDescription
                     )
-                    self?.value = Result.failure(error)
+                    self?.set(value: Result.failure(error))
                 }
 
             } else {

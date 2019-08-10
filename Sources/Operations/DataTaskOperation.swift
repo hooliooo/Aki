@@ -92,7 +92,7 @@ public final class DataTaskOperation: AsyncOperation<Result<Data, Error>> {
             if let onComplete = self?.onComplete {
                 onComplete(result)
             } else {
-                self?.value = result
+                self?.set(value: result)
             }
         }
 

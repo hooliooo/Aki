@@ -47,12 +47,12 @@ public final class DeserializationOperation<T: Decodable>: AkiOperation<Result<T
             let value: T = try decoder.decode(T.self, from: data)
             os_log("Successfully deserialized %s: %s", log: logger, type: OSLogType.error, "\(T.self)", "\(value)")
             let result: Result<T, DecodingError> = Result.success(value)
-            self.value = result
+            self.set(value: result)
             self.onComplete(result)
         } catch let error as DecodingError {
             os_log("Deserialization Error: %s", log: logger, type: OSLogType.error, error.localizedDescription)
             let result: Result<T, DecodingError> = Result.failure(error)
-            self.value = result
+            self.set(value: result)
             self.onComplete(result)
         } catch {
             os_log("Unknown Error: %s", log: logger, type: OSLogType.error, error.localizedDescription)

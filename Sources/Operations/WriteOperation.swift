@@ -107,7 +107,7 @@ public final class WriteOperation: AsyncOperation<Result<URL, WriteOperation.Err
                         error.localizedDescription,
                         url.path
                     )
-                    self.value = Result.failure(WriteOperation.Error.urlCannotBeRead(error.localizedDescription))
+                    self.set(value: Result.failure(WriteOperation.Error.urlCannotBeRead(error.localizedDescription)))
                     self.state = AkiOperation.State.finished
                     return
                 }
@@ -125,7 +125,7 @@ public final class WriteOperation: AsyncOperation<Result<URL, WriteOperation.Err
             guard writeError == 0 else {
                 writeIO.close(flags: DispatchIO.CloseFlags.stop)
                 os_log("WriteOperation error: %i", log: logger, type: OSLogType.error, writeError)
-                s.value = Result.failure(WriteOperation.Error.writeError(writeError))
+                s.set(value: Result.failure(WriteOperation.Error.writeError(writeError)))
                 s.state = AkiOperation.State.finished
                 return
             }
@@ -133,13 +133,13 @@ public final class WriteOperation: AsyncOperation<Result<URL, WriteOperation.Err
             guard !s.isCancelled else {
                 writeIO.close(flags: DispatchIO.CloseFlags.stop)
                 os_log("WriteOperation cancelled", log: logger, type: OSLogType.info)
-                s.value = Result.failure(WriteOperation.Error.cancelled)
+                s.set(value: Result.failure(WriteOperation.Error.cancelled))
                 s.state = AkiOperation.State.finished
                 return
             }
 
             if isDoneWriting {
-                s.value = Result.success(s.outputFileURL)
+                s.set(value: Result.success(s.outputFileURL))
                 writeIO.close()
                 os_log("Done writing to %s", log: logger, type: OSLogType.info, s.outputFileURL.path)
                 s.state = AkiOperation.State.finished
