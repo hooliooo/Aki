@@ -17,6 +17,15 @@ fileprivate let decoder: JSONDecoder = JSONDecoder()
 */
 public final class DeserializationOperation<T: Decodable>: AkiOperation<Result<T, DecodingError>> {
 
+
+    public init(onComplete: @escaping (Result<T, DecodingError>) -> Void = { _ in }) {
+        self.onComplete = onComplete
+        super.init()
+    }
+
+    // MARK: Stored Properties
+    private let onComplete: (Result<T, DecodingError>) -> Void
+
     public override func main() {
         defer { self.state = AkiOperation.State.finished }
         guard !self.isCancelled else { return }
@@ -37,10 +46,14 @@ public final class DeserializationOperation<T: Decodable>: AkiOperation<Result<T
         do {
             let value: T = try decoder.decode(T.self, from: data)
             os_log("Successfully deserialized %s: %s", log: logger, type: OSLogType.error, "\(T.self)", "\(value)")
-            self.value = Result.success(value)
+            let result: Result<T, DecodingError> = Result.success(value)
+            self.value = result
+            self.onComplete(result)
         } catch let error as DecodingError {
             os_log("Deserialization Error: %s", log: logger, type: OSLogType.error, error.localizedDescription)
-            self.value = Result.failure(error)
+            let result: Result<T, DecodingError> = Result.failure(error)
+            self.value = result
+            self.onComplete(result)
         } catch {
             os_log("Unknown Error: %s", log: logger, type: OSLogType.error, error.localizedDescription)
         }

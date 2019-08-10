@@ -69,7 +69,7 @@ open class AkiOperation<T>: Operation {
     /**
      The end value of the AkiOperation's task.
     */
-    public internal(set) var value: T?
+    public private(set) var value: T?
 
     /**
      The state of the AsyncOperation. Setting this value will trigger the necessary KVO functionality.
@@ -107,6 +107,10 @@ open class AkiOperation<T>: Operation {
 
         self.main()
         self.state = AkiOperation.State.executing
+    }
+
+    public final func set(value: T) {
+        self.value = value
     }
 }
 
