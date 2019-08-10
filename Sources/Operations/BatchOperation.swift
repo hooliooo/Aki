@@ -6,12 +6,18 @@
 
 import Foundation
 
-open class BatchOperation<T>: AkiOperation<T> {
+open class BatchOperation: AkiOperation<Void> {
 
     // MARK: Initializers
     public init(operations: [Operation], queueConfiguration: (OperationQueue) -> Void) {
         super.init()
         queueConfiguration(self.internalQueue)
+
+        self.finishingOperation = BlockOperation { [weak self] () -> Void in
+            print("Finished Batch Operation")
+            self?.set(value: ())
+            self?.state = .finished
+        }
         self.internalQueue.isSuspended = true
         self.finishingOperation.addDependency(self.startingOperation)
 
@@ -29,7 +35,7 @@ open class BatchOperation<T>: AkiOperation<T> {
 
     // MARK: Stored Properties
     private let startingOperation: BlockOperation = BlockOperation(block: {})
-    private let finishingOperation: BlockOperation = BlockOperation(block: {})
+    private var finishingOperation: BlockOperation!
     private let internalQueue: OperationQueue = OperationQueue()
 
     public override final var isAsynchronous: Bool {

@@ -22,7 +22,7 @@ class AkiCopyableTests: QuickSpec {
                 let op: DataTaskOperation = DataTaskOperation(session: URLSession.shared, urlRequest: URLRequest(url: url))
                 let jsonOp: DeserializationOperation<Pokemon> = DeserializationOperation<Pokemon>()
 
-                let groupOp: APIOperation<Pokemon> = APIOperation<Pokemon>(networkingOp: op, jsonOp: jsonOp)
+                let groupOp: APIOperation = APIOperation(networkingOp: op, jsonOp: jsonOp)
 
                 let downloadURL: URL = URL(string: "https://pokeapi.co/api/v2/pokemon/2")!
                 let rootURL: URL = try! FileManager.default.url(for: FileManager.SearchPathDirectory.cachesDirectory, in: FileManager.SearchPathDomainMask.userDomainMask, appropriateFor: nil, create: true)
@@ -48,9 +48,9 @@ class AkiCopyableTests: QuickSpec {
 
 }
 
-public class APIOperation<T: Decodable>: BatchOperation<T> {
+public class APIOperation: BatchOperation {
 
-    public init(networkingOp: DataTaskOperation, jsonOp: DeserializationOperation<T>) {
+    public init(networkingOp: DataTaskOperation, jsonOp: DeserializationOperation<Pokemon>) {
         self.networkingOp = networkingOp
         self.jsonOp = jsonOp
         jsonOp.addDependency(networkingOp)
@@ -61,24 +61,7 @@ public class APIOperation<T: Decodable>: BatchOperation<T> {
     }
 
     private let networkingOp: DataTaskOperation
-    private let jsonOp: DeserializationOperation<T>
-
-    public override func main() {
-        self.jsonOp.completionBlock = { [weak self] () -> Void in
-            guard let s = self else { return }
-            defer { s.state = .finished }
-
-            guard let jsonOpValue = s.jsonOp.value else { return }
-
-            switch jsonOpValue {
-                case .success(let value):
-                    s.value = value
-                case .failure(let error):
-                    s.value = nil
-            }
-        }
-    }
-
+    private let jsonOp: DeserializationOperation<Pokemon>
 }
 
 public struct Pokemon: Decodable {
