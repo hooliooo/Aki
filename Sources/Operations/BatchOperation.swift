@@ -36,7 +36,7 @@ open class BatchOperation: AkiOperation<Void> {
     // MARK: Stored Properties
     private let startingOperation: BlockOperation = BlockOperation(block: {})
     private var finishingOperation: BlockOperation!
-    private let internalQueue: OperationQueue = OperationQueue()
+    public let internalQueue: OperationQueue = OperationQueue()
 
     public override final var isAsynchronous: Bool {
         return true
